@@ -29,3 +29,10 @@ Roles
 
 MVP stage – Architecture & Core setup
 
+## Admin Panel Setup
+
+- Laravel 10
+- Filament v3.2
+- Spatie Permission
+- SuperAdmin created
+- Custom redirect to /admin/login
