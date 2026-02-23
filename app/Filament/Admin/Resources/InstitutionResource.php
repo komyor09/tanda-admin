@@ -85,7 +85,7 @@ class InstitutionResource extends Resource
 
         if ($user->hasRole('partner')) {
             return parent::getEloquentQuery()
-                ->whereIn('id', $user->institutions()->pluck('id'));
+                ->whereIn('institutions.id', $user->institutions()->pluck('institutions.id'));
         }
 
         return parent::getEloquentQuery();
