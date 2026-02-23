@@ -104,6 +104,11 @@ class UserResource extends Resource
         return $user->hasAnyRole(['admin', 'superadmin']);
     }
 
+    public static function shouldRegisterNavigation(): bool
+    {
+        return auth()->user()->hasAnyRole(['admin', 'superadmin']);
+    }
+    
     public static function getRelations(): array
     {
         return [
