@@ -37,9 +37,14 @@ class Institution extends Model
         'status' => 'boolean',
         'featured' => 'boolean',
     ];
-    
+
     public function users()
     {
         return $this->belongsToMany(User::class);
+    }
+
+    public function applications()
+    {
+        return $this->hasMany(Application::class);
     }
 }
